@@ -11,5 +11,3 @@ This project will not run locally in isolation. (Maybe post POC)
 
 To see the container in action look at https://gitlab.digital.homeoffice.gov.uk/cto/api-directory 
 
-
-
