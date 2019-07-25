@@ -25,11 +25,14 @@ ENV VER=$DAPPER_VER
 
 COPY --from=builder /go/bin/dapperdox /go/bin/dapperdox
 COPY --from=builder /go/src/dapperdox-${VER}/assets /go/bin/assets
+COPY run.sh /go/bin
 
 WORKDIR /go/bin
 
+RUN mkdir -p specs
+RUN chown 1000 specs
+
 COPY assets/ assets
-COPY specs/ specs
 
 USER 1000
 EXPOSE 3123
@@ -41,7 +44,6 @@ ENV THEME dapperdox-theme-gov-uk
 ENV LOGLEVEL info
 ENV BIND_ADDR 0.0.0.0:3123
 ENV FORCE_SPECIFICATION_LIST true
-ENV SPEC_FILENAME="uber/swagger.json"
 
-CMD ./dapperdox
+CMD sh run.sh
 
