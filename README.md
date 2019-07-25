@@ -7,8 +7,8 @@ From their README :
 
 There is a dapperdox docker project (https://github.com/bircow/docker-dapperdox). I couldn't get this to work for multiple spec-files. Possibly a deficiency in go-wrapper.
 
-This project will not run locally in isolation.
+This project will not run locally in isolation. (Maybe post POC)
+
 To see the container in action look at https://gitlab.digital.homeoffice.gov.uk/cto/api-directory 
 
-There is a lot of detail in the dapperdox documentation about adding addition content with markdon.
 
