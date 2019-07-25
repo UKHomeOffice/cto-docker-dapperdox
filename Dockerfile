@@ -34,6 +34,9 @@ RUN chown 1000 specs
 
 COPY assets/ assets
 
+RUN mkdir -p assets/sections
+RUN chown 1000 assets/sections
+
 USER 1000
 EXPOSE 3123
 
