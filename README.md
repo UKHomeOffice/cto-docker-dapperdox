@@ -24,7 +24,7 @@ The Dockerfile contains the bulk of the detail. It basically :
 ## run.sh
 
 This file copies spec files and md file around. 
-When this container is run a volume is created and mapped to /specs. Git-sync conditioners write to this volume, 
+When this container is run a volume is created and mapped to /specs. Git-sync containers write to this volume, 
 but the files are in the wrong structure. This script is a simple fix. 
 
 ## quay
