@@ -10,6 +10,7 @@ body {
 
 .footer {
     margin-top: 0;
+	text-shadow: none;
     color: #34495e;
     display: inline;
 }
