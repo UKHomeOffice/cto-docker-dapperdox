@@ -11,3 +11,22 @@ This project will not run locally in isolation. (Maybe post POC)
 
 To see the container in action look at https://gitlab.digital.homeoffice.gov.uk/cto/api-directory 
 
+## Description
+
+The Dockerfile contains the bulk of the detail. It basically :
+
+- Creates the dapperdox binary in a container stage
+- Copies the binary into the second stage container
+- Copies the base assets (templates, css etc)
+- Prepares a assets/sections directory for copied in project markdown
+- runs a bash script to move files around in the directory structure
+
+## run.sh
+
+This file copies spec files and md file around. 
+When this container is run a volume is created and mapped to /specs. Git-sync conditioners write to this volume, 
+but the files are in the wrong structure. This script is a simple fix. 
+
+## quay
+
+The drone file pushes this to the quay open repository.
