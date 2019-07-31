@@ -30,3 +30,16 @@ but the files are in the wrong structure. This script is a simple fix.
 ## quay
 
 The drone file pushes this to the quay open repository.
+
+## Running locally
+
+```bash
+
+sh bin/buildDocker.sh
+
+sh bin/runDocker.sh
+
+open http://localhost:3123
+
+
+```
