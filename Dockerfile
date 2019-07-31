@@ -47,6 +47,7 @@ ENV THEME dapperdox-theme-gov-uk
 ENV LOGLEVEL info
 ENV BIND_ADDR 0.0.0.0:3123
 ENV FORCE_SPECIFICATION_LIST true
+ENV WAIT 10
 
-CMD sh run.sh
+CMD sh run.sh $WAIT
 
