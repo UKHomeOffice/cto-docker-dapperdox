@@ -1,4 +1,4 @@
-ARG DAPPER_VER=1.2.2
+ARG DAPPER_VER=1.2.3
 
 FROM golang:1.12.7 AS builder
 ARG DAPPER_VER
@@ -9,7 +9,7 @@ RUN apt-get -y update && apt-get -y install zip
 
 # download and unzip Dapperdox sources
 RUN cd /go/src/ && \
-    curl -L -o dapperdox.zip https://github.com/DapperDox/dapperdox/archive/v${VER}.zip && \
+    curl -L -o dapperdox.zip https://github.com/UKHomeOffice/dapperdox/archive/v${VER}.zip && \
     unzip dapperdox.zip && \
     rm dapperdox.zip
 
